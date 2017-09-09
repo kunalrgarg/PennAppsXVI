@@ -1,11 +1,13 @@
 #TODO: Get yahoo_finance to read out metrics
 #TODO: Lay out the basic framework for the NASDAQ 12
 
+
+
 def Revenue(x): #http://www.nasdaq.com/investing/dozen/revenue.aspx
     pass
 
 def EarningsPerShare(x): #http://www.nasdaq.com/investing/dozen/earnings-per-share.aspx
-    pass
+    return x.get_earnings_share()
 
 def ReturnOnEquity(x): #http://www.nasdaq.com/investing/dozen/return-on-equity-roe.aspx
     pass

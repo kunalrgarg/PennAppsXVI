@@ -18,4 +18,6 @@ def make_img(results):
 
 if __name__ == "__main__":
     import sys
+    print(Share("'" + sys.argv[1]).get_name() + "':")
     print(process_metric(sys.argv[1]))
+    #print(Metrics.EarningsPerShare(sys.argv[1]))
