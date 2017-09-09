@@ -1,5 +1,6 @@
 from yahoo_finance import Share
 import inspect
+import Metrics
 
 def process_metric(stock_name):
     metrics = collect_metrics()
@@ -9,6 +10,7 @@ def process_metric(stock_name):
     return images
 
 def collect_metrics():
-    return [member[1] for member in inspect.members()]
+    return [member[1] for member in inspect.getmembers(Metrics, predicate=inspect.ismethod())]
 
 def make_img(results):
+    pass
