@@ -6,11 +6,16 @@ def process_metric(stock_name):
     metrics = collect_metrics()
     data = Share(stock_name)
     results = [metric(data) for metric in metrics]
-    images = [make_img(result) for result in results]
-    return images
+    return results
+    #images = [make_img(result) for result in results]
+    #return images
 
 def collect_metrics():
-    return [member[1] for member in inspect.getmembers(Metrics, predicate=inspect.ismethod())]
+    return [member[1] for member in inspect.getmembers(Metrics, predicate=inspect.isfunction)]
 
 def make_img(results):
     pass
+
+if __name__ == "__main__":
+    import sys
+    print(process_metric(sys.argv[1]))
