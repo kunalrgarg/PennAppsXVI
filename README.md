@@ -1,7 +1,7 @@
 # Stock Stats
 
-##PennAppsXVI
-###Aladdin Integration with webapp
+## PennAppsXVI
+### Aladdin Integration with webapp
 
 
 ## Inspiration
